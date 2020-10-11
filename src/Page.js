@@ -41,7 +41,7 @@ export default function Page({selectMember, selectRepo}){
             }
         )
         
-      }, [])
+      }, [getFollowers, renderPage])
 
       function getFollowers(){
           return fetchFollowers().then(response=>{

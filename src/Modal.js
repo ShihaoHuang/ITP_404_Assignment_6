@@ -10,7 +10,7 @@ export default function Modal({member,  onClose}){
         }).then(response=>{
             setInfo(response);
         })
-    })
+    }, [fetchAPI])
     function fetchAPI(){
         return fetch(`https://api.github.com/users/${member}`, {
           headers: {

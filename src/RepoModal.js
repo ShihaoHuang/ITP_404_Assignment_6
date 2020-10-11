@@ -9,18 +9,19 @@ export default function RepoModal({url,  onClose}){
             return response.json();
         }).then(response=>{
             setInfo(response);
-            console.log(response)
         })
-    },[])
-    function fetchAPI(){
-        console.log(url)
-        return fetch(url, {
-          headers: {
-            Authorization: 'token 31830d17e83cee43166324aaa35c93d6444e083a',
-            Accept: "application/json",
-          },
-        });
-      }
+    },[fetchAPI])
+
+   function fetchAPI(){
+      console.log(url)
+      return fetch(url, {
+        headers: {
+          Authorization: 'token 31830d17e83cee43166324aaa35c93d6444e083a',
+          Accept: "application/json",
+        },
+      });
+    }
+  
       function mapElements(data, handleEach){
         // console.log(data)
         return data.map(element=>{
@@ -30,7 +31,7 @@ export default function RepoModal({url,  onClose}){
       function handleEach(element){
           return <>
           <div key = {element.id}>
-            <div><a href={element.html_url} target="_blank">{element.name}</a></div> 
+            <div><a href={element.html_url} target="_blank" rel="noopener noreferrer">{element.name}</a></div> 
 
                     <div>description:{element.description || " none"}</div>
                     <br></br>
