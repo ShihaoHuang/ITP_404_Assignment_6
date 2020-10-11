@@ -10,7 +10,8 @@ export default function RepoModal({url,  onClose}){
         }).then(response=>{
             setInfo(response);
         })
-    },[fetchAPI])
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[])
 
    function fetchAPI(){
       console.log(url)

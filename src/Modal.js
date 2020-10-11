@@ -10,7 +10,8 @@ export default function Modal({member,  onClose}){
         }).then(response=>{
             setInfo(response);
         })
-    }, [fetchAPI])
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
     function fetchAPI(){
         return fetch(`https://api.github.com/users/${member}`, {
           headers: {

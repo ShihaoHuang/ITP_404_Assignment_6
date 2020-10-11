@@ -40,8 +40,8 @@ export default function Page({selectMember, selectRepo}){
             renderPage();
             }
         )
-        
-      }, [getFollowers, renderPage])
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+      }, [])
 
       function getFollowers(){
           return fetchFollowers().then(response=>{
