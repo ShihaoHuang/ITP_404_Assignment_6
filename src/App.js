@@ -1,14 +1,6 @@
 
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import "./App.css"
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  NavLink,
-} from "react-router-dom";
-import { useParams, useHistory } from "react-router-dom";
 import Modal from "./Modal"
 import Page from "./Page"
 import RepoModal from './RepoModal'
