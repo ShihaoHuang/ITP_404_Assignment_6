@@ -82,7 +82,7 @@ export default function Page({selectMember, selectRepo}){
  
             <li key={element.id} className="list-group-item">
                 <div className="row ml-4 mb-4">
-                    <img className = " col-2 p-3 rounded-circle pointer" alt={element.login} src={element.avatar_url} onClick={()=>selectMember(element.login)}></img>
+                    <img className = " p-3 rounded-circle pointer" alt={element.login} src={element.avatar_url} onClick={()=>selectMember(element.login)}></img>
                     <div className ="">
                         <h4 className = "m-3 pointer" onClick={()=>selectMember(element.login)}>{element.login}</h4>
                         <div className = " p-3">
